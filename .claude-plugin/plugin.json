@@ -1,0 +1,13 @@
+{
+  "name": "mintlify-docs",
+  "version": "0.1.0",
+  "description": "House-style toolkit for Mintlify docs sites. Scaffold an IA, review pages against a content playbook, write reader-facing changelogs, and generate drift-checked CLI/MCP/API references. Layers on the official mintlify plugin for component and docs.json mechanics.",
+  "author": {
+    "name": "Pat Dugan",
+    "url": "https://github.com/pdugan20"
+  },
+  "homepage": "https://github.com/pdugan20/mintlify-docs",
+  "repository": "https://github.com/pdugan20/mintlify-docs",
+  "license": "MIT",
+  "keywords": ["documentation", "mintlify", "docs", "technical-writing", "developer-tools"]
+}

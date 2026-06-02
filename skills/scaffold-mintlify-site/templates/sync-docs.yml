@@ -1,0 +1,56 @@
+# Pull-based mirror sync. This workflow lives in the MIRROR repo (the org-owned
+# repo Mintlify connects to), NOT the product repo. It clones the public source,
+# rsyncs docs-mintlify/ to the mirror root, and self-pushes with the built-in
+# token. No cross-repo credentials needed. See best-practices sections 1 and 2.
+#
+# ADAPT: <OWNER>/<PROJECT> is the public product repo that holds docs-mintlify/.
+# Set the mirror repo's token to write:
+#   gh api --method PUT /repos/<ORG>/docs/actions/permissions/workflow \
+#     -f default_workflow_permissions=write
+
+name: Sync docs from source
+
+on:
+  schedule:
+    - cron: '*/30 * * * *' # safety net
+  workflow_dispatch: {} # manual
+  repository_dispatch:
+    types: [docs-changed] # optional near-instant trigger from the source repo
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-docs
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout mirror
+        uses: actions/checkout@v6
+
+      - name: Clone source docs
+        run: |
+          git clone --depth 1 https://github.com/<OWNER>/<PROJECT>.git /tmp/src
+
+      - name: Sync docs-mintlify to mirror root
+        run: |
+          rsync -a --delete \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='README.md' \
+            /tmp/src/docs-mintlify/ ./
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "docs-sync"
+          git config user.email "docs-sync@users.noreply.github.com"
+          if [ -n "$(git status --porcelain)" ]; then
+            git add -A
+            git commit -m "chore: sync docs from source"
+            git push
+          else
+            echo "No changes."
+          fi
