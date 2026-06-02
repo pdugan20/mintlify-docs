@@ -77,10 +77,12 @@ if the user wants commits (small, logical commits). Never hand-edit generated
 pages (reference, changelog); change the generator instead (see the
 `document-reference` and `changelog-writer` skills).
 
-### Step 5: Link check
+### Step 5: Link check and build
 
 Run `mint broken-links` in `docs-mintlify/` after the pass (or after each page on
-a long review).
+a long review). Also boot `mint dev` once: `broken-links` does **not** parse
+frontmatter, so a malformed `title:`/`description:` passes the link check but
+fails the build. `mint dev` reports it as "syntax error in your frontmatter".
 
 ### Step 6: Pre-launch checklist
 
@@ -93,7 +95,9 @@ These recur and are quick wins:
 
 - **Generic indigo primary** (`#6366f1` or the Mintlify default) chosen by
   accident rather than deliberately (best-practices section 6).
-- **Em dashes in body prose** (grep the em-dash character; section 4).
+- **Em dashes in body prose** (grep the em-dash character; section 4). When
+  fixing these, watch the frontmatter: a colon-space in an unquoted `title:`/
+  `description:` breaks the build, so quote any value that gains a colon.
 - **`<Tip>` callouts** or stacked callouts (section 4).
 - **Pages with no `description` or no `icon`** (section 4).
 - **Hardcoded drift-prone counts** ("37 tools") in hand-written prose
