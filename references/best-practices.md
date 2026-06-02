@@ -124,7 +124,12 @@ optional. Surface the AI story as its own group.
 - **A short "what it does" in 2 to 4 capability pillars**, not a feature dump.
 - **Second person, present tense, imperative.** Short paragraphs.
 - **No em dashes.** Hard rule for shipped docs. Use commas, colons, or
-  parentheses. (Grep for the em-dash character before shipping.)
+  parentheses. (Grep for the em-dash character before shipping.) **Frontmatter
+  caveat:** a colon followed by a space inside an unquoted YAML `title:` or
+  `description:` starts a nested mapping and breaks the build. When you replace
+  an em dash with a colon in frontmatter, wrap the whole value in quotes
+  (`description: "Two ways: local or remote."`). `mint dev` surfaces these as
+  "syntax error in your frontmatter"; a link check won't.
 - **No hardcoded, drift-prone counts** ("37 tools") unless programmatically
   derived. Illustrative sample-output blocks are fine; keep one consistent
   fictional example across pages.

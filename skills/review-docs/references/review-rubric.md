@@ -10,6 +10,8 @@ the per-page punch list. Categories below match the punch-list grouping.
 - [ ] `description` is a real sentence (SEO/search snippet), not a label.
 - [ ] `icon` set, and consistent with the other pages in its tab.
 - [ ] `sidebarTitle` used if the title is long.
+- [ ] Frontmatter values containing a colon-space are quoted (an unquoted
+      `title:`/`description:` with `: ` breaks YAML parsing and the build).
 - [ ] The page leads with the differentiator, not the crowded category.
 - [ ] "What it does" is 2 to 4 capability pillars, not a feature dump.
 
