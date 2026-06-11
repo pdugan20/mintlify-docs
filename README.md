@@ -7,11 +7,11 @@
 A Claude Code plugin for building and maintaining [Mintlify](https://mintlify.com)
 documentation sites in a consistent house style.
 
-It **layers on the official [`mintlify`](https://claude.com/plugins/mintlify)
-plugin**: that plugin owns Mintlify mechanics (component syntax, `docs.json`
-schema, OpenAPI). This one owns the editorial decisions: information
-architecture, voice, callout discipline, scaffolding, drift-checked references,
-and changelog style.
+The official [`mintlify`](https://claude.com/plugins/mintlify) plugin owns the
+mechanics: component syntax, `docs.json` schema, OpenAPI. This plugin layers
+on top and owns the editorial decisions: information architecture, voice,
+callout discipline, scaffolding, drift-checked references, and changelog
+style.
 
 ## Skills
 
@@ -51,9 +51,9 @@ claude --plugin-dir /path/to/mintlify-docs
 
 ## Requirements
 
-Install the official `mintlify` plugin with
-`/plugin install mintlify@claude-plugins-official`; it is a declared
-dependency, and Claude Code flags it when missing but does not install it
-for you. The preview and link-check workflows assume the
+The official `mintlify` plugin is a declared dependency and installs
+automatically with this plugin (or manually:
+`/plugin install mintlify@claude-plugins-official`). The preview and
+link-check workflows assume the
 [Mintlify CLI](https://www.npmjs.com/package/mint) (`npm i -g mint`), and
 the generator scripts need a Python or Node toolchain in the target project.
