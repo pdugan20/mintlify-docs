@@ -1,0 +1,19 @@
+{
+  "queries": [
+    { "prompt": "Document the CLI commands for the docs site", "should_trigger": true },
+    { "prompt": "Generate an MCP tool reference page for the docs", "should_trigger": true },
+    { "prompt": "Set up drift-checked API reference docs that regenerate from the spec", "should_trigger": true },
+    { "prompt": "Add a CLI reference to our Mintlify docs", "should_trigger": true },
+    { "prompt": "Document every tool the MCP server exposes on a reference page", "should_trigger": true },
+    { "prompt": "Create reference pages from the OpenAPI spec", "should_trigger": true },
+    { "prompt": "The reference docs keep going stale; set up generated reference pages with CI", "should_trigger": true },
+    { "prompt": "Write the API reference section for the documentation site", "should_trigger": true },
+    { "prompt": "Add docstrings to the CLI module", "should_trigger": false },
+    { "prompt": "Document this function with a clear comment", "should_trigger": false },
+    { "prompt": "Write a guide on how to use the CLI for common workflows", "should_trigger": false },
+    { "prompt": "Generate TypeScript types from the OpenAPI spec", "should_trigger": false },
+    { "prompt": "What tools does this MCP server expose?", "should_trigger": false },
+    { "prompt": "Add JSDoc comments to the API client", "should_trigger": false },
+    { "prompt": "Create an architecture overview page explaining how the system fits together", "should_trigger": false }
+  ]
+}

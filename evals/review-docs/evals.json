@@ -1,0 +1,19 @@
+{
+  "queries": [
+    { "prompt": "Review the docs site before we launch", "should_trigger": true },
+    { "prompt": "Do a content pass on the documentation in docs-mintlify", "should_trigger": true },
+    { "prompt": "Audit our Mintlify docs against best practices and give me what to fix", "should_trigger": true },
+    { "prompt": "Polish the docs: check the voice, callouts, and links on every page", "should_trigger": true },
+    { "prompt": "Check the IA of the docs site, the nav feels cluttered", "should_trigger": true },
+    { "prompt": "Walk through every docs page and give me a per-page punch list", "should_trigger": true },
+    { "prompt": "Review docs-mintlify/quickstart.mdx for style and structure", "should_trigger": true },
+    { "prompt": "Run a pre-launch check on the documentation site", "should_trigger": true },
+    { "prompt": "Review this pull request", "should_trigger": false },
+    { "prompt": "Review the API design in server.py and suggest improvements", "should_trigger": false },
+    { "prompt": "Proofread this email draft to a customer", "should_trigger": false },
+    { "prompt": "Audit the npm dependencies for vulnerabilities", "should_trigger": false },
+    { "prompt": "Review the changelog entries for the last release", "should_trigger": false },
+    { "prompt": "Check the README for typos", "should_trigger": false },
+    { "prompt": "Do a security review of the auth module", "should_trigger": false }
+  ]
+}
