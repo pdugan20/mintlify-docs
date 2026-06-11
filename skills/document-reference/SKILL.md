@@ -2,18 +2,6 @@
 name: document-reference
 description: This skill should be used when the user asks to "document the CLI", "document the MCP tools", "document the API", "generate a reference page", "write API reference", "add a CLI reference", or wants drift-checked reference docs for a Mintlify site. Sets up generated-from-source reference pages (CLI / MCP / API) plus the drift CI that keeps them honest.
 argument-hint: 'cli | mcp | api'
-allowed-tools:
-  - Read
-  - Write
-  - Edit
-  - Glob
-  - Grep
-  - Bash(ls *)
-  - Bash(cat *)
-  - Bash(python *)
-  - Bash(uv run *)
-  - Bash(node *)
-  - Bash(npx *)
 ---
 
 # Document Reference

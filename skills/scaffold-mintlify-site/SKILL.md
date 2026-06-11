@@ -2,16 +2,6 @@
 name: scaffold-mintlify-site
 description: This skill should be used when the user asks to "scaffold a docs site", "set up Mintlify", "create a docs-mintlify directory", "stand up docs", "bootstrap documentation", or wants a new Mintlify docs site for a project. Generates a docs-mintlify/ tree with a topic-grouped IA, docs.json, page stubs, generators, Makefile targets, and the mirror sync + drift CI, all in house style.
 argument-hint: '[project root]'
-allowed-tools:
-  - Read
-  - Write
-  - Edit
-  - Glob
-  - Grep
-  - Bash(ls *)
-  - Bash(cat *)
-  - Bash(mkdir *)
-  - Bash(test *)
 ---
 
 # Scaffold Mintlify Site

@@ -2,17 +2,6 @@
 name: review-docs
 description: This skill should be used when the user asks to "review docs", "review the docs site", "polish the docs", "do a content pass", "check the IA", "audit the docs site", or is editing a Mintlify docs-mintlify/ tree and wants a quality pass. Walks pages in nav order against the house content playbook and pre-launch checklist, reports a per-page punch list options-first, then makes targeted edits.
 argument-hint: '[path to docs-mintlify | single page]'
-allowed-tools:
-  - Read
-  - Edit
-  - Write
-  - Glob
-  - Grep
-  - Bash(ls *)
-  - Bash(cat *)
-  - Bash(grep *)
-  - Bash(cd * && npx mint@latest broken-links)
-  - Bash(cd * && mint broken-links)
 ---
 
 # Review Docs

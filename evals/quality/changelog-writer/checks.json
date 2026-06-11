@@ -1,0 +1,83 @@
+{
+  "max_turns": 30,
+  "checks": [
+    {
+      "name": "preamble cut (We're excited)",
+      "type": "file_must_not_match",
+      "path": "docs-mintlify/changelog.mdx",
+      "pattern": "We're excited"
+    },
+    {
+      "name": "version archaeology cut (rolls up)",
+      "type": "file_must_not_match",
+      "path": "docs-mintlify/changelog.mdx",
+      "pattern": "[Rr]olls up"
+    },
+    {
+      "name": "vanity metric cut (95%)",
+      "type": "file_must_not_match",
+      "path": "docs-mintlify/changelog.mdx",
+      "pattern": "95%"
+    },
+    {
+      "name": "implementation trivia cut (embedding details)",
+      "type": "file_must_not_match",
+      "path": "docs-mintlify/changelog.mdx",
+      "pattern": "voyage-3-lite|512-dim|cosine"
+    },
+    {
+      "name": "bare count cut (12 new tools)",
+      "type": "file_must_not_match",
+      "path": "docs-mintlify/changelog.mdx",
+      "pattern": "12 new tools"
+    },
+    {
+      "name": "internal method cut (verify_credentials)",
+      "type": "file_must_not_match",
+      "path": "docs-mintlify/changelog.mdx",
+      "pattern": "verify_credentials"
+    },
+    {
+      "name": "hype cut (faster than ever!)",
+      "type": "file_must_not_match",
+      "path": "docs-mintlify/changelog.mdx",
+      "pattern": "faster than ever"
+    },
+    {
+      "name": "future work cut (Coming soon / Goodreads)",
+      "type": "file_must_not_match",
+      "path": "docs-mintlify/changelog.mdx",
+      "pattern": "Coming soon|Goodreads"
+    },
+    {
+      "name": "tag normalized (Misc not in closed set)",
+      "type": "file_must_not_match",
+      "path": "docs-mintlify/changelog.mdx",
+      "pattern": "\"Misc\""
+    },
+    {
+      "name": "double-hyphen separators replaced",
+      "type": "file_must_not_match",
+      "path": "docs-mintlify/changelog.mdx",
+      "pattern": " -- "
+    },
+    {
+      "name": "version stripped from heading",
+      "type": "file_must_not_match",
+      "path": "docs-mintlify/changelog.mdx",
+      "pattern": "## Acme Sync v0\\.4\\.3"
+    },
+    {
+      "name": "Update structure preserved",
+      "type": "file_must_match",
+      "path": "docs-mintlify/changelog.mdx",
+      "pattern": "<Update label="
+    },
+    {
+      "name": "tags preserved",
+      "type": "file_must_match",
+      "path": "docs-mintlify/changelog.mdx",
+      "pattern": "tags=\\{"
+    }
+  ]
+}
