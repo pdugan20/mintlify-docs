@@ -3,3 +3,4 @@ node_modules/
 .claudelint-cache/
 *.log
 mintlify-docs-plugin.zip
+__pycache__/
