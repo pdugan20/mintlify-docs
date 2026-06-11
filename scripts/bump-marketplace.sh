@@ -30,6 +30,8 @@ fi
 
 git commit -aqm "chore: bump ${plugin} to v${version}"
 git push -q -u origin "$branch"
-gh pr create --repo "$repo" \
+# --head is required: gh cannot infer the head branch in this throwaway
+# depth-1 clone.
+gh pr create --repo "$repo" --head "$branch" \
   --title "chore: bump ${plugin} to v${version}" \
   --body "Syncs the marketplace entry with ${plugin} v${version}. Opened automatically by the release-it after:release hook in pdugan20/${plugin}."
