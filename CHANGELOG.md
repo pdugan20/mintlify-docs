@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.1](https://github.com/pdugan20/mintlify-docs/compare/v0.2.0...v0.2.1) (2026-06-11)
+
+### Features
+
+* add quality evals; fix allowed-tools breaking skill execution ([#8](https://github.com/pdugan20/mintlify-docs/issues/8)) ([3cc1731](https://github.com/pdugan20/mintlify-docs/commit/3cc1731df82c26dac988e24fe325ec1664f94a6c))
+
+### Bug Fixes
+
+* pass --head to gh pr create in marketplace bump ([#6](https://github.com/pdugan20/mintlify-docs/issues/6)) ([c418641](https://github.com/pdugan20/mintlify-docs/commit/c4186413a46a345e5e6ac9cb08391c4404a9fcc1))
+
 ## 0.2.0 (2026-06-11)
 
 ### Features
