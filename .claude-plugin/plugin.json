@@ -10,6 +10,7 @@
   "homepage": "https://github.com/pdugan20/mintlify-docs",
   "repository": "https://github.com/pdugan20/mintlify-docs",
   "license": "MIT",
+  "dependencies": ["mintlify@anthropics"],
   "keywords": [
     "documentation",
     "mintlify",
