@@ -1,0 +1,45 @@
+{
+  "max_turns": 30,
+  "checks": [
+    {
+      "name": "flags the flat 6-page nav group",
+      "type": "output_mentions_any",
+      "terms": ["flat", "topic group", "topic-group", "regroup", "split the nav", "split into groups"]
+    },
+    {
+      "name": "flags the default indigo primary",
+      "type": "output_mentions_any",
+      "terms": ["6366f1", "indigo", "default primary", "generic primary"]
+    },
+    {
+      "name": "flags the em dash in index.mdx",
+      "type": "output_mentions_any",
+      "terms": ["em dash", "em-dash", "em dashes"]
+    },
+    {
+      "name": "flags the Tip callout",
+      "type": "output_mentions_any",
+      "terms": ["<Tip>", "Tip callout", "Tip block", "no `<Tip>`", "Tip>"]
+    },
+    {
+      "name": "flags the stacked callouts",
+      "type": "output_mentions_any",
+      "terms": ["stacked", "back-to-back", "consecutive callout"]
+    },
+    {
+      "name": "flags the missing description on quickstart",
+      "type": "output_mentions_any",
+      "terms": ["missing description", "no description", "lacks a description", "add a description", "description is missing", "without a description", "missing a description", "missing `description`", "no `description`", "without a `description`", "needs a description", "has no description"]
+    },
+    {
+      "name": "flags the missing icon on index",
+      "type": "output_mentions_any",
+      "terms": ["missing icon", "no icon", "lacks an icon", "add an icon", "icon is missing", "missing an icon", "missing `icon`", "no `icon`", "without an icon", "without an `icon`", "needs an icon", "has no icon"]
+    },
+    {
+      "name": "flags the hardcoded tool count",
+      "type": "output_mentions_any",
+      "terms": ["37"]
+    }
+  ]
+}

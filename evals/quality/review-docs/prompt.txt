@@ -1,0 +1,3 @@
+Review the docs site at docs-mintlify/ and report the complete punch list of
+issues, including the IA check on the navigation. Report findings only; do not
+edit any files.
