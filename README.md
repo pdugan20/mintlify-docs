@@ -1,6 +1,7 @@
 # mintlify-docs
 
 [![CI](https://github.com/pdugan20/mintlify-docs/workflows/CI/badge.svg)](https://github.com/pdugan20/mintlify-docs/actions)
+[![Release](https://img.shields.io/github/v/release/pdugan20/mintlify-docs?logo=github)](https://github.com/pdugan20/mintlify-docs/releases/latest)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?logo=opensourceinitiative&logoColor=white)](https://opensource.org/licenses/MIT)
 
 A Claude Code plugin for building and maintaining [Mintlify](https://mintlify.com)
@@ -33,6 +34,15 @@ every skill cites it rather than restating it.
 /plugin install mintlify-docs@pdugan20-plugins
 ```
 
+### Trial without the marketplace
+
+Each release attaches the plugin as a zip, so you can try it for a single
+session without registering anything:
+
+```bash
+claude --plugin-url https://github.com/pdugan20/mintlify-docs/releases/latest/download/mintlify-docs-plugin.zip
+```
+
 ### For development
 
 ```bash
@@ -41,8 +51,9 @@ claude --plugin-dir /path/to/mintlify-docs
 
 ## Companion plugin
 
-Install the official Mintlify plugin for the underlying mechanics this plugin
-defers to:
+The official Mintlify plugin owns the underlying mechanics this plugin defers
+to, and is declared as a dependency in the manifest. If it is not already
+enabled:
 
 ```text
 /plugin install mintlify@anthropics
