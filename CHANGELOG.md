@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.2](https://github.com/pdugan20/mintlify-docs/compare/v0.2.1...v0.2.2) (2026-06-11)
+
+### Bug Fixes
+
+* correct mintlify dependency address, fold companion section into requirements ([#9](https://github.com/pdugan20/mintlify-docs/issues/9)) ([20dd191](https://github.com/pdugan20/mintlify-docs/commit/20dd191d43fd6dff15aca3deddf0750263f6bfc5))
+
 ## [0.2.1](https://github.com/pdugan20/mintlify-docs/compare/v0.2.0...v0.2.1) (2026-06-11)
 
 ### Features
