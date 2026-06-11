@@ -38,6 +38,9 @@ jobs:
           npm install -g @anthropic-ai/claude-code
           claude plugin validate . --strict
 
+      - name: Install smoke test (dependency auto-install)
+        run: bash scripts/test-install.sh
+
       - name: Run shellcheck
         run: shellcheck scripts/*.sh skills/*/scripts/*.sh
 
