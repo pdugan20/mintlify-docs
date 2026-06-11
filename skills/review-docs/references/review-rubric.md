@@ -1,8 +1,9 @@
 # Per-page review rubric
 
-The operational checklist `review-docs` runs on each page. Every item traces to a
-section of the shared playbook (`references/best-practices.md`). Use it to build
-the per-page punch list. Categories below match the punch-list grouping.
+The operational checklist `review-docs` runs on each page. Every item traces
+to a section of the shared playbook (`references/best-practices.md`). Use it
+to build the per-page punch list. Categories below match the punch-list
+grouping.
 
 ## Frame and title (section 4)
 
@@ -11,7 +12,8 @@ the per-page punch list. Categories below match the punch-list grouping.
 - [ ] `icon` set, and consistent with the other pages in its tab.
 - [ ] `sidebarTitle` used if the title is long.
 - [ ] Frontmatter values containing a colon-space are quoted (an unquoted
-      `title:`/`description:` with `: ` breaks YAML parsing and the build).
+      `title:`/`description:` value with a colon followed by a space breaks
+      YAML parsing and the build).
 - [ ] The page leads with the differentiator, not the crowded category.
 - [ ] "What it does" is 2 to 4 capability pillars, not a feature dump.
 

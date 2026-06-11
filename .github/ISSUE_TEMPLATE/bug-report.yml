@@ -1,0 +1,35 @@
+name: Bug report
+description: A skill misbehaves, produces off-style output, or breaks a docs build
+labels: [bug]
+body:
+  - type: dropdown
+    id: skill
+    attributes:
+      label: Skill
+      options:
+        - scaffold-mintlify-site
+        - review-docs
+        - changelog-writer
+        - document-reference
+        - plugin-wide / other
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What did the skill do, and what did you expect instead?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: How to reproduce
+      description: The prompt you used, plus relevant context (project type, existing docs tree).
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Plugin version
+      description: From /plugin list, or the marketplace entry.

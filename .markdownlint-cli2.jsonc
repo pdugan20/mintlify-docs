@@ -1,0 +1,11 @@
+{
+  "config": {
+    // House style wraps prose at 80 columns. Tables and code blocks are
+    // exempt: nav tables and CI snippets legitimately run long.
+    "MD013": { "line_length": 80, "tables": false, "code_blocks": false },
+    // Makefile snippets inside fenced blocks need literal tabs.
+    "MD010": { "code_blocks": false }
+  },
+  "globs": ["**/*.md"],
+  "ignores": ["node_modules/**", "CHANGELOG.md"]
+}

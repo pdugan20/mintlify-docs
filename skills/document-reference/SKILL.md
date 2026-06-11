@@ -48,8 +48,8 @@ For `<ParamField>`, `<Tabs>`, and other component syntax, defer to the official
 
 ### Step 1: Find the source of truth
 
-- CLI: locate the entry point (a `console_scripts` in `pyproject.toml`, a `bin` in
-  `package.json`, or the `main`/argparse/click/typer module).
+- CLI: locate the entry point (a `console_scripts` in `pyproject.toml`, a
+  `bin` in `package.json`, or the `main`/argparse/click/typer module).
 - MCP: locate the server module that registers tools (e.g. a FastMCP instance).
 - API: locate the OpenAPI spec (`openapi.json`/`openapi.yaml`) or the generator
   that emits it.

@@ -54,8 +54,8 @@ these the project has, since they drive the IA and the reference tab:
 
 Present 2 to 3 options plus a recommendation (best-practices section 5) for:
 
-- **Brand primary color.** Do not default to the generic indigo `#6366f1`; pick a
-  deliberate color with AA contrast in light and dark (section 6).
+- **Brand primary color.** Do not default to the generic indigo `#6366f1`;
+  pick a deliberate color with AA contrast in light and dark (section 6).
 - **The differentiator hook** for the introduction (section 4).
 - **The how-to topic groups** for this project (e.g. Getting started / Everyday
   use / Integrations / Claude (MCP) / Concepts / Help), section 3.
@@ -92,7 +92,7 @@ entries (section 3).
   `docs` (preview), `docs-reference` (regenerate), `docs-links` (broken-links).
 - **Reference generators:** hand off to the `document-reference` skill to add
   `gen_cli_reference.py` / `gen_mcp_reference.py` and the drift CI.
-- **Mirror sync:** the org/mirror hosting recipe (best-practices sections 1 and 2)
+- **Mirror sync:** the org/mirror hosting recipe (best-practices sections 1-2)
   is a one-time, mostly-browser setup. Add the pull-based sync workflow to the
   *mirror* repo from [templates/sync-docs.yml](./templates/sync-docs.yml). Walk
   the user through the launch recipe steps that require the browser (org creation,
