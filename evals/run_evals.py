@@ -14,6 +14,7 @@ wired into CI.
     python3 evals/run_evals.py review-docs         # one skill
     python3 evals/run_evals.py --runs 3            # repeat for flake checking
     python3 evals/run_evals.py --max-queries 2     # smoke test the harness
+    python3 evals/run_evals.py --workers 1         # serial (default 4)
 
 A skill passes a query when the majority of its runs agree with
 should_trigger (the anthropics/skills convention: 0.5 trigger-rate
@@ -23,6 +24,7 @@ threshold).
 from __future__ import annotations
 
 import argparse
+import concurrent.futures
 import json
 import pathlib
 import subprocess
@@ -87,12 +89,38 @@ def skill_fired(fired_inputs: set[str], skill: str) -> bool:
     return any(skill in raw for raw in fired_inputs)
 
 
+def evaluate_query(
+    skill: str, query: dict, runs: int, model: str | None
+) -> dict:
+    prompt, expected = query["prompt"], query["should_trigger"]
+    hits = 0
+    notes = []
+    for _ in range(runs):
+        fired, note = run_query(prompt, model)
+        hits += skill_fired(fired, skill)
+        if note:
+            notes.append(note)
+    triggered = hits / runs >= 0.5
+    return {
+        "skill": skill,
+        "prompt": prompt,
+        "expected": expected,
+        "hits": hits,
+        "runs": runs,
+        "ok": triggered == expected,
+        "notes": notes,
+    }
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("skills", nargs="*", help="skill names; default all")
     parser.add_argument("--runs", type=int, default=1, help="runs per query")
     parser.add_argument("--max-queries", type=int, help="cap queries per skill")
     parser.add_argument("--model", help="model override passed to claude")
+    parser.add_argument(
+        "--workers", type=int, default=4, help="concurrent sessions (default 4)"
+    )
     args = parser.parse_args()
 
     eval_files = sorted(EVALS_DIR.glob("*/evals.json"))
@@ -102,36 +130,39 @@ def main() -> int:
         print("no evals.json found for the requested skills", file=sys.stderr)
         return 2
 
-    total_correct = total_queries = 0
+    jobs = []
     for eval_file in eval_files:
         skill = eval_file.parent.name
         queries = json.loads(eval_file.read_text())["queries"]
         if args.max_queries:
             queries = queries[: args.max_queries]
-        print(f"\n{skill} ({len(queries)} queries, {args.runs} run(s) each)")
+        jobs += [(skill, query) for query in queries]
+    print(f"{len(jobs)} queries x {args.runs} run(s), {args.workers} worker(s)")
 
-        correct = 0
-        for query in queries:
-            prompt, expected = query["prompt"], query["should_trigger"]
-            hits = 0
-            notes = []
-            for _ in range(args.runs):
-                fired, note = run_query(prompt, args.model)
-                hits += skill_fired(fired, skill)
-                if note:
-                    notes.append(note)
-            triggered = hits / args.runs >= 0.5
-            ok = triggered == expected
-            correct += ok
-            marker = "pass" if ok else "FAIL"
-            detail = f" [{'; '.join(notes)}]" if notes else ""
-            print(
-                f"  {marker}  expected={'fire' if expected else 'skip'} "
-                f"got {hits}/{args.runs}  {prompt[:70]}{detail}"
+    with concurrent.futures.ThreadPoolExecutor(args.workers) as pool:
+        results = list(
+            pool.map(
+                lambda job: evaluate_query(job[0], job[1], args.runs, args.model),
+                jobs,
             )
+        )
+
+    total_correct = total_queries = 0
+    for eval_file in eval_files:
+        skill = eval_file.parent.name
+        skill_results = [r for r in results if r["skill"] == skill]
+        correct = sum(r["ok"] for r in skill_results)
+        print(f"\n{skill}")
+        for r in skill_results:
+            marker = "pass" if r["ok"] else "FAIL"
+            detail = f" [{'; '.join(r['notes'])}]" if r["notes"] else ""
+            print(
+                f"  {marker}  expected={'fire' if r['expected'] else 'skip'} "
+                f"got {r['hits']}/{r['runs']}  {r['prompt'][:70]}{detail}"
+            )
+        print(f"  {skill}: {correct}/{len(skill_results)} correct")
         total_correct += correct
-        total_queries += len(queries)
-        print(f"  {skill}: {correct}/{len(queries)} correct")
+        total_queries += len(skill_results)
 
     print(f"\noverall: {total_correct}/{total_queries} correct")
     return 0 if total_correct == total_queries else 1
