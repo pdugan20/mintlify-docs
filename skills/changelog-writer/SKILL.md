@@ -56,8 +56,8 @@ describes how the team built something, cut it.
 - **Version archaeology.** "Rolls up v0.3.0 to v0.4.3 into one entry", "this
   release combines...". The date label does this work.
 - **Vanity metrics.** Coverage percentages, "rescues NYT/Reuters", "3x faster",
-  "now supports 12 providers". Readers care about the outcome, not the work. If a
-  number matters (a new cap, a new limit), state it flatly, no celebration.
+  "now supports 12 providers". Readers care about the outcome, not the work.
+  If a number matters (a new cap, a new limit), state it flatly, no celebration.
 - **Future work.** "Coming soon", "planned for next release", "future: Goodreads
   support". Changelogs are for shipped things only. File futures in a roadmap
   doc.

@@ -1,5 +1,29 @@
 version: 2
 updates:
+  # npm (dev tooling only; nothing ships)
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "06:00"
+      timezone: "America/New_York"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "chore"
+      prefix-development: "chore"
+      include: "scope"
+    labels:
+      - "dependencies"
+    assignees:
+      - "pdugan20"
+    groups:
+      dev-dependencies:
+        patterns: ["*"]
+        update-types:
+          - "minor"
+          - "patch"
+
   # GitHub Actions
   - package-ecosystem: "github-actions"
     directory: "/"

@@ -15,7 +15,7 @@ and changelog style.
 ## Skills
 
 | Skill | Command | Description |
-|-------|---------|-------------|
+| ----- | ------- | ----------- |
 | Scaffold a site | `/scaffold-mintlify-site` | Stand up a `docs-mintlify/` tree with a topic-grouped IA, `docs.json`, generators, and sync CI |
 | Review docs | `/review-docs` | Walk pages in nav order against the content playbook and pre-launch checklist |
 | Write changelog | `/changelog-writer` | Write and audit reader-facing `<Update>` entries |

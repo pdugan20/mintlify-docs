@@ -1,0 +1,40 @@
+name: PR Lint
+
+on:
+  pull_request_target:
+    types: [opened, reopened, edited, synchronize]
+
+permissions:
+  pull-requests: read
+
+jobs:
+  validate-title:
+    name: Validate PR Title
+    runs-on: ubuntu-latest
+    steps:
+      - uses: amannn/action-semantic-pull-request@v6
+        with:
+          # Type must match [a-zA-Z]+ — no hyphens. The conventional-commits
+          # parser rejects hyphenated types regardless of this allowlist, so
+          # Dependabot is configured to use `chore(deps)` / `chore(deps-dev)`
+          # (hyphen lives in the scope, which is fine).
+          types: |
+            feat
+            fix
+            docs
+            style
+            refactor
+            perf
+            test
+            build
+            ci
+            chore
+            deps
+            revert
+          requireScope: false
+          subjectPattern: ^[a-z].*$
+          subjectPatternError: |
+            The subject must start with a lowercase letter.
+            Example: "feat: add eval harness for skill triggering"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -86,8 +86,8 @@ Keep the four modes distinct; do not blur them:
 - **Explanation/concepts:** the *why* (`architecture`, `design`).
 
 **Navigation: group how-tos by topic, not by Diátaxis label, once you have more
-than a few.** A single flat "How-to guides" list stops scanning well past about 5
-entries. A proven shape for a CLI + MCP project:
+than a few.** A single flat "How-to guides" list stops scanning well past
+about 5 entries. A proven shape for a CLI + MCP project:
 
 ```text
 Guides (tab)
@@ -281,8 +281,8 @@ out the theme.
 
 ## 9. Tooling
 
-- **Local preview:** `mint dev` in `docs-mintlify/` (live reload; favicon needs a
-  restart).
+- **Local preview:** `mint dev` in `docs-mintlify/` (live reload; favicon
+  needs a restart).
 - **Link check:** `mint broken-links`.
 - **Make targets:** `make docs` (preview), `make docs-reference` (regenerate),
   `make docs-links` (check).

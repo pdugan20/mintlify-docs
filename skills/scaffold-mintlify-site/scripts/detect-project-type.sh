@@ -34,7 +34,7 @@ if grep -rqsE 'FastMCP|modelcontextprotocol|mcp\.server|@modelcontextprotocol' \
 fi
 
 # HTTP API (OpenAPI spec).
-if ls openapi.json openapi.yaml openapi.yml 2>/dev/null | grep -q .; then
+if [ -f openapi.json ] || [ -f openapi.yaml ] || [ -f openapi.yml ]; then
   note "api: OpenAPI spec present"
 elif grep -rqs 'openapi' docs-mintlify/docs.json 2>/dev/null; then
   note "api: docs.json references openapi"

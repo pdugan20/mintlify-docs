@@ -22,8 +22,8 @@ editorial review, not the mechanics. For Mintlify component syntax and `docs.jso
 schema questions, defer to the official `mintlify` plugin.
 
 The authority for every rule cited here is the shared playbook:
-`${CLAUDE_PLUGIN_ROOT}/references/best-practices.md`. Read it first. This skill is
-the procedure that applies it; the operational rubric is in
+`${CLAUDE_PLUGIN_ROOT}/references/best-practices.md`. Read it first. This skill
+is the procedure that applies it; the operational rubric is in
 [references/review-rubric.md](./references/review-rubric.md).
 
 ## The two non-negotiable habits
