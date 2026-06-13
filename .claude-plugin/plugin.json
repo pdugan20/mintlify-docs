@@ -11,7 +11,7 @@
   "repository": "https://github.com/pdugan20/mintlify-docs",
   "license": "MIT",
   "dependencies": [
-    "mintlify@claude-plugins-official"
+    { "name": "mintlify", "marketplace": "claude-plugins-official" }
   ],
   "keywords": [
     "documentation",
