@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.3](https://github.com/pdugan20/mintlify-docs/compare/v0.2.2...v0.2.3) (2026-06-13)
+
+### Bug Fixes
+
+* cross-marketplace mintlify dependency, add install smoke test ([#13](https://github.com/pdugan20/mintlify-docs/issues/13)) ([3f7a4ff](https://github.com/pdugan20/mintlify-docs/commit/3f7a4fff76e98506917d04d2945723fe86729141))
+
+### Documentation
+
+* rewrite intro paragraph, requirements reflect dependency auto-install ([#11](https://github.com/pdugan20/mintlify-docs/issues/11)) ([0df3d48](https://github.com/pdugan20/mintlify-docs/commit/0df3d4832c16260b38072cc2ed457fb07c1dea9d))
+* simplify requirements to prose, drop dependency clause from intro ([#10](https://github.com/pdugan20/mintlify-docs/issues/10)) ([dfceca8](https://github.com/pdugan20/mintlify-docs/commit/dfceca83a1219e332d702c3c889e554e9c80ebc4))
+
+### Continuous Integration
+
+* add install smoke test for dependency auto-install ([#12](https://github.com/pdugan20/mintlify-docs/issues/12)) ([0f01d6a](https://github.com/pdugan20/mintlify-docs/commit/0f01d6a3ba11410cad473b49cc12db61e91af288))
+
 ## [0.2.2](https://github.com/pdugan20/mintlify-docs/compare/v0.2.1...v0.2.2) (2026-06-11)
 
 ### Bug Fixes
