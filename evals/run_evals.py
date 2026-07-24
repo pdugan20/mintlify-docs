@@ -63,6 +63,7 @@ def run_query(prompt: str, model: str | None) -> tuple[set[str], str]:
                 capture_output=True,
                 text=True,
                 timeout=TIMEOUT_S,
+                check=False,
             )
         except subprocess.TimeoutExpired:
             return set(), "timeout"

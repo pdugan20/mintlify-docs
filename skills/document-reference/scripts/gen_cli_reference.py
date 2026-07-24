@@ -45,9 +45,8 @@ def from_docstring() -> str:
 # --- Shape 2: a Click/Typer app (introspect commands + params) ----------------
 def from_click() -> str:
     # ADAPT: import the Click group / Typer app object.
-    from your_package.cli import cli  # a click.Group
-
     import click
+    from your_package.cli import cli  # a click.Group
 
     out = [HEADER]
     ctx = click.Context(cli, info_name="<your-tool>")

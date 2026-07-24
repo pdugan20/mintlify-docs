@@ -54,7 +54,12 @@ def run_session(
     ]
     try:
         proc = subprocess.run(
-            cmd, cwd=cwd, capture_output=True, text=True, timeout=TIMEOUT_S
+            cmd,
+            cwd=cwd,
+            capture_output=True,
+            text=True,
+            timeout=TIMEOUT_S,
+            check=False,
         )
     except subprocess.TimeoutExpired:
         return ""
