@@ -19,7 +19,7 @@ import pathlib
 
 # ADAPT: import path of the module that registers tools on the FastMCP instance.
 # Importing it must register every tool on the shared `mcp` instance.
-from your_package.server import mcp  # noqa: F401
+from your_package.server import mcp
 
 # ADAPT: output path and tool name in the header text.
 OUT = pathlib.Path("docs-mintlify/reference/mcp-tools.mdx")
