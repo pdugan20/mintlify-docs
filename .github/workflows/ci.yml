@@ -45,7 +45,9 @@ jobs:
         run: shellcheck scripts/*.sh skills/*/scripts/*.sh
 
       - name: Run ruff
-        run: pipx run ruff check skills evals
+        run: |
+          python3 -m pip install --disable-pip-version-check --requirement requirements-dev.txt
+          ruff check skills evals
 
       - name: Run actionlint
         run: |
