@@ -2,13 +2,15 @@
   "name": "mintlify-docs",
   "version": "0.2.3",
   "private": true,
-  "description": "Dev tooling for the mintlify-docs Claude Code plugin. The plugin itself is pure-skill; nothing in this package ships to users.",
+  "description": "Dev tooling for the mintlify-docs plugin for Claude and Codex. The plugin itself is pure-skill; nothing in this package ships to users.",
   "license": "MIT",
   "scripts": {
     "lint": "npm run lint:claude && npm run lint:md",
-    "lint:claude": "claudelint check-all",
+    "lint:claude": "claudelint check-all --strict --no-cache",
     "lint:md": "markdownlint-cli2",
+    "validate:marketplace": "claudelint validate-plugin --preset strict --warnings-as-errors",
     "validate:plugin": "claude plugin validate . --strict",
+    "verify": "npm run lint && npm run validate:marketplace && npm run validate:plugin",
     "sync:version": "node scripts/sync-plugin-version.js",
     "package:plugin": "bash scripts/package-plugin.sh",
     "release": "release-it"
@@ -16,7 +18,7 @@
   "devDependencies": {
     "@release-it/conventional-changelog": "^11.0.1",
     "claude-code-lint": "^0.7.0",
-    "markdownlint-cli2": "^0.23.1",
+    "markdownlint-cli2": "^0.23.2",
     "release-it": "^20.2.1"
   }
 }

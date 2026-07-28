@@ -13,13 +13,15 @@ anti-drift CI sit next to the code), wired for the org/mirror hosting model.
 This skill owns the editorial shape (IA, page set, house defaults). For component
 syntax and `docs.json` schema details, defer to the official `mintlify` plugin.
 The authority for every decision here is
-`${CLAUDE_PLUGIN_ROOT}/references/best-practices.md`; read it first.
+[references/best-practices.md](../../references/best-practices.md); read it
+first.
 
 ## Usage
 
-Invoke with `/scaffold-mintlify-site [project root]`. The skill runs in three
-phases: detect and decide (below), generate the tree, then wire the toolchain.
-It is non-destructive: it never overwrites an existing `docs-mintlify/`.
+Provide the project root in the request or after an explicit skill invocation.
+The skill runs in three phases: detect and decide (below), generate the tree,
+then wire the toolchain. It is non-destructive: it never overwrites an existing
+`docs-mintlify/`.
 
 ## Instructions: detect and decide
 
