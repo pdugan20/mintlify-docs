@@ -1,0 +1,34 @@
+{
+  "name": "mintlify-docs",
+  "version": "0.2.3",
+  "description": "House-style toolkit for Mintlify docs sites. Scaffold an IA, review pages against a content playbook, write reader-facing changelogs, and generate drift-checked CLI/MCP/API references.",
+  "author": {
+    "name": "Pat Dugan",
+    "url": "https://github.com/pdugan20"
+  },
+  "homepage": "https://github.com/pdugan20/mintlify-docs",
+  "repository": "https://github.com/pdugan20/mintlify-docs",
+  "license": "MIT",
+  "keywords": [
+    "documentation",
+    "mintlify",
+    "docs",
+    "technical-writing",
+    "developer-tools"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Mintlify Docs",
+    "shortDescription": "House-style workflows for Mintlify documentation sites.",
+    "longDescription": "Scaffold, review, and maintain Mintlify documentation sites with consistent information architecture, editorial standards, changelogs, and drift-checked reference pages.",
+    "developerName": "Pat Dugan",
+    "category": "Developer Tools",
+    "capabilities": ["Write"],
+    "websiteURL": "https://github.com/pdugan20/mintlify-docs",
+    "defaultPrompt": [
+      "Review this Mintlify docs site.",
+      "Scaffold a Mintlify docs site for this project.",
+      "Document this project's CLI reference."
+    ]
+  }
+}

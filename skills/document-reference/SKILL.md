@@ -18,7 +18,8 @@ For `<ParamField>`, `<Tabs>`, and other component syntax, defer to the official
 
 ## Pick a target
 
-`$ARGUMENTS` is one of `cli`, `mcp`, `api`.
+Use the requested target from the user's prompt, including any text supplied
+after an explicit skill invocation. The target is one of `cli`, `mcp`, `api`.
 
 - **cli** — generate `reference/cli.mdx` (and per-domain `reference/cli/*.mdx`)
   from the CLI's own help/introspection. Template:

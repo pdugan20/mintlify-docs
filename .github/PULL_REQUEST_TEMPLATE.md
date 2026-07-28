@@ -20,8 +20,7 @@ against a real docs site with `claude --plugin-dir`? -->
 
 ## Checklist
 
-- [ ] `npm run lint` passes (claudelint + markdownlint)
-- [ ] `npm run validate:plugin` passes
+- [ ] `npm run verify` passes (ClaudeLint, Markdownlint, and plugin validation)
 - [ ] PR title follows [Conventional Commits](https://www.conventionalcommits.org/)
 - [ ] Skill changes keep SKILL.md as procedure and cite
       `references/best-practices.md` instead of restating it

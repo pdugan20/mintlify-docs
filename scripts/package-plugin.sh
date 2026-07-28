@@ -9,6 +9,6 @@ cd "$(dirname "$0")/.."
 out="mintlify-docs-plugin.zip"
 
 rm -f "$out"
-zip -qr "$out" .claude-plugin skills references LICENSE README.md \
+zip -qr "$out" .claude-plugin .codex-plugin skills references LICENSE README.md \
   -x '*/__pycache__/*' -x '*.pyc'
 echo "wrote $out"

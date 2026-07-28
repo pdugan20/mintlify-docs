@@ -17,8 +17,11 @@
     "publish": false
   },
   "hooks": {
-    "before:init": ["npm run lint", "npm run validate:plugin"],
-    "after:bump": ["npm run sync:version", "git add .claude-plugin/plugin.json"],
+    "before:init": ["npm run verify"],
+    "after:bump": [
+      "npm run sync:version",
+      "git add .claude-plugin/plugin.json .codex-plugin/plugin.json"
+    ],
     "after:release": [
       "bash scripts/bump-marketplace.sh ${version}",
       "echo Released ${name} v${version}. Merge the marketplace bump PR on pdugan20/pdugan20-plugins to publish."
