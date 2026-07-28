@@ -1,6 +1,6 @@
 {
   "name": "mintlify-docs",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "private": true,
   "description": "Dev tooling for the mintlify-docs plugin for Claude and Codex. The plugin itself is pure-skill; nothing in this package ships to users.",
   "license": "MIT",

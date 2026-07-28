@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.3.0](https://github.com/pdugan20/mintlify-docs/compare/v0.2.3...v0.3.0) (2026-07-28)
+
+### Features
+
+* add Codex plugin support ([#27](https://github.com/pdugan20/mintlify-docs/issues/27)) ([914b626](https://github.com/pdugan20/mintlify-docs/commit/914b626247742c93432a4fbb268bcdcc0c11a68f))
+
+### Continuous Integration
+
+* bump actions/checkout from 6 to 7 ([#14](https://github.com/pdugan20/mintlify-docs/issues/14)) ([fbafcde](https://github.com/pdugan20/mintlify-docs/commit/fbafcde550e859c16409e90bf0b25e4ffc7293b3))
+* bump actions/setup-node from 6 to 7 ([#17](https://github.com/pdugan20/mintlify-docs/issues/17)) ([8861639](https://github.com/pdugan20/mintlify-docs/commit/8861639698bb7923fdae592530e1c2ef69162547))
+* drop the needless self-approve step from dependabot auto-merge ([#19](https://github.com/pdugan20/mintlify-docs/issues/19)) ([480b015](https://github.com/pdugan20/mintlify-docs/commit/480b015b3ca571759c80336a433d0e7a31869d89))
+* pin Ruff and restore green lint ([#22](https://github.com/pdugan20/mintlify-docs/issues/22)) ([b19aab7](https://github.com/pdugan20/mintlify-docs/commit/b19aab7acf25f57bd4c65ece6c971769cc684c9c))
+* remove disabled Dependabot auto-merge workflow ([#21](https://github.com/pdugan20/mintlify-docs/issues/21)) ([0f0fb7f](https://github.com/pdugan20/mintlify-docs/commit/0f0fb7fe778fc6329b248f2f5289bdee984d5856))
+
 ## [0.2.3](https://github.com/pdugan20/mintlify-docs/compare/v0.2.2...v0.2.3) (2026-06-13)
 
 ### Bug Fixes
