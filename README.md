@@ -30,28 +30,22 @@ every skill cites it rather than restating it.
 ### Skills CLI
 
 ```bash
-npx skills add pdugan20/mintlify-docs
-```
-
-Pin a release when reproducibility matters:
-
-```bash
-npx skills add https://github.com/pdugan20/mintlify-docs/tree/v0.3.2
+npx skills@latest add pdugan20/mintlify-docs
 ```
 
 ### Claude
 
 ```text
-/plugin marketplace add pdugan20/patrick-tools
-/plugin install mintlify-docs@patrick-tools
+/plugin marketplace add pdugan20/plugins
+/plugin install mintlify-docs@patrick-plugins
 ```
 
 ### Codex
 
 ```text
-codex plugin marketplace add pdugan20/patrick-tools
+codex plugin marketplace add pdugan20/plugins
 codex plugin add mintlify@claude-plugins-official
-codex plugin add mintlify-docs@patrick-tools
+codex plugin add mintlify-docs@patrick-plugins
 ```
 
 Patrick's private `agent-tooling` setup installs and refreshes both runtime

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Opens a PR against pdugan20/patrick-tools that advances both runtime
+# Opens a PR against pdugan20/plugins that advances both runtime
 # catalogs to the same tagged plugin release. Runs as the release-it
 # after:release hook on the releasing machine, so it uses the local gh auth;
 # no PAT or repo secret is needed.
@@ -7,7 +7,7 @@ set -euo pipefail
 
 version="${1:?usage: bump-marketplace.sh <version>}"
 plugin="mintlify-docs"
-repo="pdugan20/patrick-tools"
+repo="pdugan20/plugins"
 branch="bump/${plugin}-v${version}"
 claude_manifest=".claude-plugin/marketplace.json"
 codex_manifest=".agents/plugins/marketplace.json"

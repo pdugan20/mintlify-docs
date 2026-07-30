@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.3.3](https://github.com/pdugan20/mintlify-docs/compare/v0.3.2...v0.3.3) (2026-07-30)
+
+### Bug Fixes
+
+* use the renamed plugin marketplace ([128e78c](https://github.com/pdugan20/mintlify-docs/commit/128e78c74b5c6030ee9d07ccaec01cdfb1f96a9f))
+
 ## [0.3.2](https://github.com/pdugan20/mintlify-docs/compare/v0.3.1...v0.3.2) (2026-07-30)
 
 ### Features
