@@ -7,8 +7,8 @@
     "requireCommits": false,
     "addUntrackedFiles": false,
     "commit": true,
-    "tag": true,
-    "push": true
+    "tag": false,
+    "push": false
   },
   "github": {
     "release": false
@@ -21,10 +21,6 @@
     "after:bump": [
       "npm run sync:version",
       "git add .claude-plugin/plugin.json .codex-plugin/plugin.json"
-    ],
-    "after:release": [
-      "bash scripts/bump-marketplace.sh ${version}",
-      "echo Released ${name} v${version}. Merge the marketplace bump PR on pdugan20/pdugan20-plugins to publish."
     ]
   },
   "plugins": {
