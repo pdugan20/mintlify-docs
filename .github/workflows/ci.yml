@@ -47,7 +47,9 @@ jobs:
         run: npm run verify
 
       - name: Install smoke test
-        run: bash scripts/test-install.sh
+        run: |
+          export PATH="$GITHUB_WORKSPACE/node_modules/.bin:$PATH"
+          bash scripts/test-install.sh
 
       - name: Run ShellCheck
         run: shellcheck scripts/*.sh skills/*/scripts/*.sh
