@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.3.1](https://github.com/pdugan20/mintlify-docs/compare/v0.3.0...v0.3.1) (2026-07-30)
+
+### Bug Fixes
+
+* use Mintlify's direct plugin source ([#29](https://github.com/pdugan20/mintlify-docs/issues/29)) ([7b59528](https://github.com/pdugan20/mintlify-docs/commit/7b59528c41ebb914333f0241e5639e3179482125))
+
 ## [0.3.0](https://github.com/pdugan20/mintlify-docs/compare/v0.2.3...v0.3.0) (2026-07-28)
 
 ### Features
