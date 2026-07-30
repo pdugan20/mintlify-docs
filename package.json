@@ -16,9 +16,14 @@
     "release": "release-it"
   },
   "devDependencies": {
-    "@release-it/conventional-changelog": "^11.0.1",
-    "claude-code-lint": "^0.7.0",
-    "markdownlint-cli2": "^0.23.2",
-    "release-it": "^20.2.1"
-  }
+    "@anthropic-ai/claude-code": "2.1.220",
+    "@release-it/conventional-changelog": "11.0.1",
+    "claude-code-lint": "0.7.0",
+    "markdownlint-cli2": "0.23.2",
+    "release-it": "20.2.1"
+  },
+  "engines": {
+    "node": ">=22.22.2"
+  },
+  "packageManager": "npm@11.5.2"
 }

@@ -27,19 +27,31 @@ every skill cites it rather than restating it.
 
 ## Installation
 
+### Skills CLI
+
+```bash
+npx skills add pdugan20/mintlify-docs
+```
+
+Pin a release when reproducibility matters:
+
+```bash
+npx skills add https://github.com/pdugan20/mintlify-docs/tree/v0.3.2
+```
+
 ### Claude
 
 ```text
-/plugin marketplace add pdugan20/pdugan20-plugins
-/plugin install mintlify-docs@pdugan20-plugins
+/plugin marketplace add pdugan20/patrick-tools
+/plugin install mintlify-docs@patrick-tools
 ```
 
 ### Codex
 
 ```text
-codex plugin marketplace add pdugan20/pdugan20-plugins
+codex plugin marketplace add pdugan20/patrick-tools
 codex plugin add mintlify@claude-plugins-official
-codex plugin add mintlify-docs@pdugan20-plugins
+codex plugin add mintlify-docs@patrick-tools
 ```
 
 Patrick's private `agent-tooling` setup installs and refreshes both runtime
@@ -81,5 +93,5 @@ The official `mintlify` plugin is a declared Claude dependency and installs
 automatically there. `agent-tooling` includes it explicitly in the Codex plugin
 set. The preview and
 link-check workflows assume the
-[Mintlify CLI](https://www.npmjs.com/package/mint) (`npm i -g mint`), and
+[Mintlify CLI](https://www.mintlify.com/docs/cli/install) (`npm i -g mint`), and
 the generator scripts need a Python or Node toolchain in the target project.

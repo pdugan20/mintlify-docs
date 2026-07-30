@@ -198,8 +198,8 @@ optional. Surface the AI story as its own group.
 On each feature or integration guide, add a single **one-line "From Claude"
 nudge** that links (a) MCP setup and (b) the per-domain tool reference:
 
-> You can also drive this from Claude. Set up the [MCP server](...), then the
-> [Plex tools](/reference/mcp-tools/plex) are yours.
+> You can also drive this from Claude. Set up the MCP server, then the
+> `/reference/mcp-tools/plex` tools are yours.
 
 Do **not** dump tool names inline (the reference owns them) and do **not** repeat
 a gating/permission note on every page; document client-side gating **once** on
