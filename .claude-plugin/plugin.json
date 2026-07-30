@@ -13,7 +13,7 @@
   "dependencies": [
     {
       "name": "mintlify",
-      "marketplace": "claude-plugins-official"
+      "marketplace": "mintlify-marketplace"
     }
   ],
   "keywords": [
