@@ -19,6 +19,6 @@
     "@release-it/conventional-changelog": "^11.0.1",
     "claude-code-lint": "^0.7.0",
     "markdownlint-cli2": "^0.23.2",
-    "release-it": "^20.2.1"
+    "release-it": "^21.0.0"
   }
 }
