@@ -56,7 +56,7 @@ bash scripts/bump-marketplace.sh "$VERSION"
 
 The tag triggers `.github/workflows/release.yml`, which extracts the changelog
 section and attaches `mintlify-docs-plugin.zip`. The final command opens a pull
-request against `pdugan20/patrick-tools`; merge it so both marketplace
+request against `pdugan20/plugins`; merge it so both marketplace
 entries advertise the released version.
 
 ## If something fails partway

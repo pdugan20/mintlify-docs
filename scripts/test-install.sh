@@ -2,7 +2,7 @@
 # Install smoke test: verifies that installing this plugin auto-installs its
 # declared dependency (mintlify@mintlify-marketplace) with no plugin
 # errors. Wraps the working tree in a throwaway local marketplace that
-# mirrors the patrick-tools cross-marketplace allowlist, so the test
+# mirrors the patrick-plugins cross-marketplace allowlist, so the test
 # covers this repo's plugin.json and the CLI behavior; the marketplace
 # repo's own CI covers the production marketplace.json.
 #
