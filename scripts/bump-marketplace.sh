@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Opens a PR against pdugan20/pdugan20-plugins that advances both runtime
+# Opens a PR against pdugan20/patrick-tools that advances both runtime
 # catalogs to the same tagged plugin release. Runs as the release-it
 # after:release hook on the releasing machine, so it uses the local gh auth;
 # no PAT or repo secret is needed.
@@ -7,7 +7,7 @@ set -euo pipefail
 
 version="${1:?usage: bump-marketplace.sh <version>}"
 plugin="mintlify-docs"
-repo="pdugan20/pdugan20-plugins"
+repo="pdugan20/patrick-tools"
 branch="bump/${plugin}-v${version}"
 claude_manifest=".claude-plugin/marketplace.json"
 codex_manifest=".agents/plugins/marketplace.json"
@@ -19,8 +19,9 @@ gh repo clone "$repo" "$tmp" -- --depth 1 --quiet
 cd "$tmp"
 git checkout -q -b "$branch"
 
-jq --arg v "$version" \
-  "(.plugins[] | select(.name == \"$plugin\") | .version) = \$v" \
+jq --arg v "$version" --arg ref "v${version}" \
+  "(.plugins[] | select(.name == \"$plugin\") | .version) = \$v |
+   (.plugins[] | select(.name == \"$plugin\") | .source.ref) = \$ref" \
   "$claude_manifest" >"$claude_manifest.tmp"
 mv "$claude_manifest.tmp" "$claude_manifest"
 

@@ -8,8 +8,8 @@ GitHub release from the pushed tag; it holds no tokens beyond `GITHUB_TOKEN`.
 - A clean release branch based on the latest `main` and pushed with an upstream.
 - `npm ci` has been run (release-it and the linters are devDependencies).
 - `gh` is authenticated (the marketplace bump PR uses your local gh auth).
-- The Claude Code CLI is installed (`npm i -g @anthropic-ai/claude-code`),
-  used by the pre-release `validate:plugin` gate.
+- `npm ci` provides the pinned Claude Code CLI used by the pre-release
+  `validate:plugin` gate.
 
 ## Prepare the release pull request
 
@@ -56,7 +56,7 @@ bash scripts/bump-marketplace.sh "$VERSION"
 
 The tag triggers `.github/workflows/release.yml`, which extracts the changelog
 section and attaches `mintlify-docs-plugin.zip`. The final command opens a pull
-request against `pdugan20/pdugan20-plugins`; merge it so both marketplace
+request against `pdugan20/patrick-tools`; merge it so both marketplace
 entries advertise the released version.
 
 ## If something fails partway

@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.3.2](https://github.com/pdugan20/mintlify-docs/compare/v0.3.1...v0.3.2) (2026-07-30)
+
+### Features
+
+* add portable skill distribution and quality gates ([a3569b2](https://github.com/pdugan20/mintlify-docs/commit/a3569b2b97ed5cd99848940a10519315705afc01))
+
+### Bug Fixes
+
+* prepare releases through protected main ([#31](https://github.com/pdugan20/mintlify-docs/issues/31)) ([00ee1bb](https://github.com/pdugan20/mintlify-docs/commit/00ee1bb8fc8e55644ddba2f66356379cbe6eb672))
+
 ## [0.3.1](https://github.com/pdugan20/mintlify-docs/compare/v0.3.0...v0.3.1) (2026-07-30)
 
 ### Bug Fixes

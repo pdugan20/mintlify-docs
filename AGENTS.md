@@ -64,6 +64,6 @@ workflows.
 
 ## Releasing
 
-See [RELEASING.md](../RELEASING.md). Short version: `npm run release` on a
+See [RELEASING.md](RELEASING.md). Short version: `npm run release` on a
 clean main; release-it bumps, syncs `.claude-plugin/plugin.json`, tags, and
 opens the marketplace bump PR. `CHANGELOG.md` is generated; never hand-edit.
