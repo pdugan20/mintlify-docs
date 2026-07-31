@@ -1,10 +1,13 @@
 ---
 name: review-docs
-description: This skill should be used when the user asks to "review docs", "review the docs site", "polish the docs", "do a content pass", "check the IA", "audit the docs site", or is editing a Mintlify docs-mintlify/ tree and wants a quality pass. Walks pages in nav order against the house content playbook and pre-launch checklist, reports a per-page punch list options-first, then makes targeted edits.
+description: Deprecated compatibility skill from the archived mintlify-docs repository. Direct users to install pdugan20/skills and use review-mintlify-docs; do not run this historical copy for new work.
 argument-hint: '[path to docs-mintlify | single page]'
 ---
 
 # Review Docs
+
+**Deprecated:** Do not execute this historical workflow for new work. Direct the
+user to install `pdugan20/skills` and use `review-mintlify-docs`.
 
 Run the house-style content and polish pass on a Mintlify docs site. This is the
 editorial review, not the mechanics. For Mintlify component syntax and `docs.json`

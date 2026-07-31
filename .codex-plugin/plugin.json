@@ -1,7 +1,7 @@
 {
   "name": "mintlify-docs",
   "version": "0.3.3",
-  "description": "House-style toolkit for Mintlify docs sites. Scaffold an IA, review pages against a content playbook, write reader-facing changelogs, and generate drift-checked CLI/MCP/API references.",
+  "description": "Deprecated standalone package. Install patrick-skills from pdugan20/skills for the maintained Mintlify documentation workflows.",
   "author": {
     "name": "Pat Dugan",
     "url": "https://github.com/pdugan20"
@@ -19,8 +19,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Mintlify Docs",
-    "shortDescription": "House-style workflows for Mintlify documentation sites.",
-    "longDescription": "Scaffold, review, and maintain Mintlify documentation sites with consistent information architecture, editorial standards, changelogs, and drift-checked reference pages.",
+    "shortDescription": "Deprecated; use Patrick Skills.",
+    "longDescription": "This standalone package is retired. Install patrick-skills from pdugan20/skills for the maintained Mintlify documentation workflows.",
     "developerName": "Pat Dugan",
     "category": "Developer Tools",
     "capabilities": [

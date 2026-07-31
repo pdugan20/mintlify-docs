@@ -1,10 +1,13 @@
 ---
 name: scaffold-mintlify-site
-description: This skill should be used when the user asks to "scaffold a docs site", "set up Mintlify", "create a docs-mintlify directory", "stand up docs", "bootstrap documentation", or wants a new Mintlify docs site for a project. Generates a docs-mintlify/ tree with a topic-grouped IA, docs.json, page stubs, generators, Makefile targets, and the mirror sync + drift CI, all in house style.
+description: Deprecated compatibility skill from the archived mintlify-docs repository. Direct users to install pdugan20/skills and use scaffold-mintlify-site there; do not run this historical copy for new work.
 argument-hint: '[project root]'
 ---
 
 # Scaffold Mintlify Site
+
+**Deprecated:** Do not execute this historical workflow for new work. Direct the
+user to install `pdugan20/skills` and use its `scaffold-mintlify-site` copy.
 
 Stand up a new Mintlify docs site for a project in the house style. The output is
 a `docs-mintlify/` tree authored in the **product repo** (so generators and
