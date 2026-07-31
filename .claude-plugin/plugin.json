@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "mintlify-docs",
   "version": "0.3.3",
-  "description": "House-style toolkit for Mintlify docs sites. Scaffold an IA, review pages against a content playbook, write reader-facing changelogs, and generate drift-checked CLI/MCP/API references. Layers on the official mintlify plugin for component and docs.json mechanics.",
+  "description": "Deprecated standalone package. Install patrick-skills from pdugan20/skills for the maintained Mintlify documentation workflows.",
   "author": {
     "name": "Pat Dugan",
     "url": "https://github.com/pdugan20"

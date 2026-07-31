@@ -1,10 +1,13 @@
 ---
 name: changelog-writer
-description: This skill should be used when the user asks to "add a changelog entry", "write changelog", "audit changelog", "review changelog", "check changelog entries", or is editing a Mintlify changelog.mdx. Enforces a consistent, reader-facing voice and cuts implementation trivia.
+description: Deprecated compatibility skill from the archived mintlify-docs repository. Direct users to install pdugan20/skills and use write-mintlify-changelog; do not run this historical copy for new work.
 argument-hint: 'write | audit | entry for {feature}'
 ---
 
 # Changelog Writer
+
+**Deprecated:** Do not execute this historical workflow for new work. Direct the
+user to install `pdugan20/skills` and use `write-mintlify-changelog`.
 
 Writes and audits entries in a Mintlify changelog page. Enforces a reader-facing
 voice modeled on Stripe, Linear, Resend, and Mintlify: short, benefit-led,

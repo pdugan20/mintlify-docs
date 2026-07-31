@@ -1,10 +1,13 @@
 ---
 name: document-reference
-description: This skill should be used when the user asks to "document the CLI", "document the MCP tools", "document the API", "generate a reference page", "write API reference", "add a CLI reference", or wants drift-checked reference docs for a Mintlify site. Sets up generated-from-source reference pages (CLI / MCP / API) plus the drift CI that keeps them honest.
+description: Deprecated compatibility skill from the archived mintlify-docs repository. Direct users to install pdugan20/skills and use generate-mintlify-reference; do not run this historical copy for new work.
 argument-hint: 'cli | mcp | api'
 ---
 
 # Document Reference
+
+**Deprecated:** Do not execute this historical workflow for new work. Direct the
+user to install `pdugan20/skills` and use `generate-mintlify-reference`.
 
 Set up **generated, drift-checked** reference pages for a Mintlify site. The
 governing principle (best-practices sections 2 and 4): reference pages are never

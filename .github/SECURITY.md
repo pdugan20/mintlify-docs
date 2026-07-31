@@ -2,14 +2,16 @@
 
 ## Supported Versions
 
-Only the latest release receives security updates.
+No standalone release receives security updates. This repository is retained
+only as migration and release history. The maintained skills live in
+[`pdugan20/skills`](https://github.com/pdugan20/skills).
 
 ## Reporting a Vulnerability
 
 Please do not report security vulnerabilities through public GitHub issues.
 
-Use GitHub Security Advisories instead:
-[Report a vulnerability](https://github.com/pdugan20/mintlify-docs/security/advisories/new)
+Report vulnerabilities against the maintained collection through its
+[GitHub Security Advisories](https://github.com/pdugan20/skills/security/advisories/new).
 
 Scope note: this plugin ships skill instructions, templates, and small
 generator scripts that run in the user's own environment. The most relevant
@@ -19,6 +21,5 @@ Reports in either category are welcome.
 
 ## What to Expect
 
-1. Acknowledgment within a few days.
-2. Assessment and severity triage.
-3. A fix release and credit in the changelog, if you want it.
+Fixes are released from `pdugan20/skills`; this archived repository will not
+receive patched standalone releases.
